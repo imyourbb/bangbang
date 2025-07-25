@@ -2,67 +2,147 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title style="color: blue; font-size: 40px;">BANGBANG'S PAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANGBANG'S PAGE</title>
     <style>
         body {
-            font-family: "Times New Roman", sans-serif;
-            max-width: 800px;
+            font-family: "Arial Rounded MT Bold", sans-serif;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             background-color: #ffffe0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .page-title {
+            color: #4a87e0;
+            font-size: 40px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         .memory-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin: 30px 0;
         }
         .memory-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             max-width: 300px;
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .memory-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
         }
         img {
             max-width: 100%;
-            border: 3px solid #ddd;
             border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .memory-item:hover img {
+            filter: brightness(1.05);
         }
         .caption {
-            color: blue;
+            color: #89CFF0;
             font-size: 18px;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+        h1 {
+            color: #ffd700;
+            font-size: 36px;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .intro {
+            font-size: 18px;
+            text-align: center;
+            color: #9370DB;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ffb6c1;
+            font-size: 28px;
+            border-bottom: 3px solid #ffb6c1;
+            text-align: center;
+            padding-bottom: 10px;
+            margin: 40px 0 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #9370DB;
+            font-weight: bold;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            padding: 20px;
+            border-top: 2px dashed #9370DB;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 响应式设计调整 */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .memory-container {
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1 style="color: yellow; font-size: 36px; text-align: center;">WELCOME！</h1>
-    <p style="font-size: 18px; text-align: center;color:#9370DB;font-weight: bold;">My name is Bangbang! This is my page.</p>
-    <h2 style="color: pink; font-size: 24px; border-bottom: 2px solid pink; text-align: center;">MY LOVELY MEMORY</h2>
+    <header>
+        <div class="page-title">BANGBANG'S PAGE</div>
+    </header>
+    
+    <h1>WELCOME！</h1>
+    <p class="intro">My name is Bangbang! This is my page.</p>
+    
+    <h2>MY LOVELY MEMORY</h2>
     
     <div class="memory-container">
         <div class="memory-item">
-            <img src="goodstudentbang.jpg" alt="I'm a good student">
+            <img src="goodstudentbang.jpg" alt="Bangbang作为好学生的照片">
             <p class="caption">I'm a good student!</p>
         </div>
         <div class="memory-item">
-            <img src="1yearbang.jpg" alt="I'm a 13 months baby now!">
+            <img src="1yearbang.jpg" alt="13个月大的Bangbang">
             <p class="caption">I'm a 13 months baby now!</p>
         </div>
         <div class="memory-item">
-            <img src="cakebang.jpg" alt="18/6/2025 is my first birthday! This is my birthday cake!">
+            <img src="cakebang.jpg" alt="Bangbang的第一个生日蛋糕">
             <p class="caption">18/6/2025 is my first birthday! This is my birthday cake!</p>
         </div>
     </div>
-<footer style="
-    text-align: center;
-    margin-top: 30px;
-    color: #9370DB;
-    font-weight: bold;
-    font-size: 18px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-    © 2025 Bangbang's Page
-</footer>
+    
+    <footer>
+        © 2025 Bangbang's Page
+    </footer>
 </body>
 </html>
